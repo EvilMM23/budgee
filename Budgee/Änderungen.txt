@@ -1,0 +1,9 @@
+Ich habe folgende Bitten an dich.
+
+1. Der umschaltbutton von Ich zu Haushalt funktioniert im Analyse-View nicht.
+2. Bei Transaktion Hinzufügen, tritt der Fehler auf dass man nach der Eingabe des Betrags die Kategorie wählt, jedoch beim Kategoriewechsel der Betrag wieder auf 0 Euro gelöscht wird.
+3. Es gibt keinerlei Übersicht von seinen Konten, bzw. wirken sich die Transaktionen auf keine Konten aus. Diese müssen noch in einem View eingebunden werden. Die Startbeträge bei der Registrierung haben keinen Effekt.
+4.Bei Übertragstransaktionen sollen auch die Konten der anderen Haushaltsmitglieder zur Verfügung stehen. 
+5. Wenn ich ein ein Konto als Kredit hinzufüge, soll der Wert automatisch negativ sein. Zusatzlich soll man wählen können welche Konten mit in die Analyse einfließen sollen.
+
+
