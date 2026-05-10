@@ -241,7 +241,7 @@ select {
   .modal-drag-handle { display:none !important; }
 
   .toast-container {
-    left:calc(50% + var(--sidebar-width)/2) !important;
+    left:50% !important;
   }
 }
 
