@@ -299,6 +299,8 @@ function buildMonthlyLineData(userId) {
   return Array.from({length:6},(_,i) => Utils.addMonths(Utils.currentMonth(), i-5))
     .map(m => {
       const txs   = State.getFilteredTransactions({ month:m, userId, type:'expense' });
+      const period = State.getBudgetPeriod(State.get('paycheckAnchor'));
+      const txs    = State.getFilteredTransactions({ period });
       const total = txs.reduce((s,t) => s+t.amount, 0);
       return { label: Utils.formatMonth(m).split(' ')[0].slice(0,3), value: total };
     });
