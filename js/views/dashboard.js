@@ -14,6 +14,8 @@ Router.register('dashboard', async (app) => {
   Navbar.setActive('dashboard');
 
   const txs     = State.getFilteredTransactions({ month });
+  const period  = State.getBudgetPeriod(State.get('paycheckAnchor'));
+  const txs     = State.getFilteredTransactions({ period });
   const income  = State.sumTransactions(txs, 'income');
   const expense = State.sumTransactions(txs, 'expense');
   const balance = income - expense;
