@@ -11,7 +11,9 @@ Router.register('budget', async (app) => {
   if (!user) { Router.navigate('login'); return; }
   Navbar.setActive('budget');
 
-  const txs          = State.getFilteredTransactions({ month, type: 'expense' });
+  const txs           = State.getFilteredTransactions({ month, type: 'expense' });
+  const period        = State.getBudgetPeriod(State.get('paycheckAnchor'));
+  const txs           = State.getFilteredTransactions({ period });
   const totalExpense  = txs.reduce((s, t) => s + t.amount, 0);
   const totalBudget   = categories.reduce((s, c) => s + (c.budget || 0), 0);
   const remaining     = Math.max(0, totalBudget - totalExpense);
